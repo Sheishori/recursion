@@ -1,3 +1,11 @@
+function fibsArray(num) {
+	let array = [];
+	for (i = 0 ; i < num; i++) {
+		array.push(fibs(i));
+	};
+	return array;
+};
+
 function fibs(num) {
 	let n = Number(num);
 	if (isNaN(n)) return "Must be a number";
@@ -8,3 +16,4 @@ function fibs(num) {
 };
 
 console.log(fibs(8));
+console.log(fibsArray(8));
