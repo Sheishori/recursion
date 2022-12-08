@@ -1,4 +1,4 @@
-function fibsArray(num) {
+function fibs(num) {
 	let array = [];
 	for (i = 0 ; i < num; i++) {
 		array.push(fibs(i));
@@ -6,7 +6,7 @@ function fibsArray(num) {
 	return array;
 };
 
-function fibs(num) {
+function fibsRec(num) {
 	let n = Number(num);
 	if (isNaN(n)) return "Must be a number";
 	if (n < 0) return "Can't be below 0";
@@ -15,5 +15,5 @@ function fibs(num) {
 	return fibs(n - 1) + fibs(n - 2);
 };
 
+console.log(fibsRec(8));
 console.log(fibs(8));
-console.log(fibsArray(8));
